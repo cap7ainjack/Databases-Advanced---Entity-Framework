@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1InitialSetup", "1InitialSetup\1InitialSetup.csproj", "{99834E35-BFCF-4FCD-B4EA-DCD47DFFDE26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2GetVillainsNames", "2GetVillainsNames\2GetVillainsNames.csproj", "{FA7C5B86-7E9C-449D-AE9C-39670A3A31D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3GetMinionNames", "3GetMinionNames\3GetMinionNames.csproj", "{79DFB560-D2C5-43B1-B37A-3D50336D8588}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99834E35-BFCF-4FCD-B4EA-DCD47DFFDE26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99834E35-BFCF-4FCD-B4EA-DCD47DFFDE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99834E35-BFCF-4FCD-B4EA-DCD47DFFDE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99834E35-BFCF-4FCD-B4EA-DCD47DFFDE26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7C5B86-7E9C-449D-AE9C-39670A3A31D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7C5B86-7E9C-449D-AE9C-39670A3A31D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7C5B86-7E9C-449D-AE9C-39670A3A31D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7C5B86-7E9C-449D-AE9C-39670A3A31D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79DFB560-D2C5-43B1-B37A-3D50336D8588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79DFB560-D2C5-43B1-B37A-3D50336D8588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79DFB560-D2C5-43B1-B37A-3D50336D8588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79DFB560-D2C5-43B1-B37A-3D50336D8588}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
