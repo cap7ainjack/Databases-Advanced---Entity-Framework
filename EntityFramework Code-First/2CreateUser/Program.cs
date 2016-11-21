@@ -15,34 +15,12 @@ namespace _2CreateUser
         {
             UsersContext context = new UsersContext();
 
-            Town town = new Town()
-            {
-                Name = "Sliven",
-                Country = "Bulgaria"
-            };
-
-            //User newUser = new User()
-            //{
-            //    Username = "Pantata",
-            //    Password = "panteleI22@",
-            //    Email = "pantelei22@abv.bg",
-            //    RegistedOn = DateTime.Now,
-            //    LastTimeLoggedIn = DateTime.Now,
-            //    Age = 25,
-            //    ProfilePicture = File.ReadAllBytes("C:\\Users\\user\\Downloads\\spitz.jpg")
-            //};
-
             using (context)
             {
                 try
                 {
-                    //var user = context.Users.First();
-                    //user.BornTown = town;
-                    //user.CurrentlyLivingTown = new Town()
-                    //{
-                    //    Name = "Varna",
-                    //    Country = "Bulgaria"
-                    //};
+                    // ProccessingTags(context);
+
                 }
                 catch (DbEntityValidationException ex)
                 {
@@ -55,6 +33,28 @@ namespace _2CreateUser
                         }
                     }
                 }
+            }
+        }
+
+        private static void ProccessingTags(UsersContext context)
+        {
+            string input = Console.ReadLine();
+
+            Tag tag = new Tag()
+            {
+                TagLabel = input
+            };
+
+            try
+            {
+                context.Tags.Add(tag);
+                context.SaveChanges();
+            }
+            catch (DbEntityValidationException dbex)
+            {
+
+                tag.TagLabel = TagTransormer.Transform(tag.TagLabel);
+                context.SaveChanges();
             }
         }
     }

@@ -22,7 +22,18 @@ namespace _2CreateUser
 
         public DbSet<Town> Towns { get; set; }
 
+        public IDbSet<Tag> Tags { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasMany(user => user.Friends)
+                .WithMany();
+
+
+
+            base.OnModelCreating(modelBuilder);
+        }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.

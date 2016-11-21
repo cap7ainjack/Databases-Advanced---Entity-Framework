@@ -10,10 +10,14 @@ namespace _2CreateUser.Models
     public class User
     {
         private string email;
+        private ICollection<User> friends;
+        private ICollection<Album> albums;
 
         public User()
         {
             IsDeleted = false;
+            friends = new HashSet<User>();
+            albums = new HashSet<Album>();
         }
 
 
@@ -58,8 +62,22 @@ namespace _2CreateUser.Models
 
         public bool IsDeleted { get; set; }
 
+        [InverseProperty("BornUsers")]
         public Town BornTown { get; set; }
 
+        [InverseProperty("LivingUsers")]
         public Town CurrentlyLivingTown { get; set; }
+
+        public virtual ICollection<User> Friends
+        {
+            get { return this.friends; }
+            set { this.friends = value; }
+        }
+
+        public virtual ICollection<Album> Albums
+        {
+            get { return this.albums; }
+            set { this.albums = value; }
+        }
     }
 }
