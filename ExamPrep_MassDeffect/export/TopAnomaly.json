@@ -1,0 +1,12 @@
+[
+  {
+    "id": 14,
+    "OriginPlanet": {
+      "name": "Kepler-1"
+    },
+    "TeleportPlanet": {
+      "name": "Alpha-N20"
+    },
+    "VictimsCount": 5
+  }
+]
